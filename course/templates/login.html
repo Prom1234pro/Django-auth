@@ -1,0 +1,10 @@
+{% extends "base.html"%}
+{% block title %}Course - Login {% endblock%}
+{% block content%}
+<form method="post" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Login">
+    <div>don't have an Account? <a href="{% url 'sign-up' %}">Sign Up</a></div>
+</form>
+{% endblock %}

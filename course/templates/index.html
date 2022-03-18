@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+{% block title%} Welcome - Course {% endblock%}
+{% block user%}
+    <div class="user">
+        <div class="icon"><div class="head"></div><div class="body"></div></div>
+        <p>{{ user }}</p>
+    </div>
+    <a class="logout" href="{% url 'logout' %}">logout</a>
+{% endblock %}
+{% block content%}
+    <div class="enroll"> <h1><a href="courses">Enroll Now</a> </h1></div>
+    <div class="enroll"> <h1><a href="registered-courses">View Courses</a></h1></div>
+{% endblock %}

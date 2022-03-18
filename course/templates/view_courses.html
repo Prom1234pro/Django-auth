@@ -1,0 +1,13 @@
+{% extends "base.html"%} 
+{% block maintitle %}
+<h1>Registered Courses</h1>
+{% endblock %}
+{% block content %}
+{% if courses %}
+{% for course in courses%}
+    <h1><a href="{{course}}/">{{ course }}</a></h1>
+{% endfor %}
+{% else %}
+    <h3>No course to show enroll first</h3>
+{% endif %}
+{% endblock %}
